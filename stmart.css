@@ -1,0 +1,117 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f9;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Шапка */
+.back-button {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.back-button .arrow {
+    font-size: 20px;
+    margin-right: 10px;
+    transition: transform 0.2s;
+}
+
+.back-button:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.back-button:hover .arrow {
+    transform: translateX(-5px);
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .back-button {
+        font-size: 16px;
+        padding: 10px 16px;
+    }
+}
+
+.content {
+    margin-top: 80px;
+    padding: 20px;
+}
+
+section {
+    background: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+}
+
+p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Анимация */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Бургер-меню для мобильных устройств */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links a {
+        padding: 10px;
+    }
+}
